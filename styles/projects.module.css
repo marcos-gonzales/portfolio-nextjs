@@ -1,0 +1,134 @@
+.project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5em;
+}
+
+.projectInformation {
+    margin-top: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.animation {
+    animation: fadeIn 1.5s;
+}
+
+.videos {
+    opacity: 0.7;
+    margin-top: 10em;
+    width: 650px;
+}
+
+.videos:hover {
+    opacity: 1;
+}
+
+.heading {
+    background: linear-gradient(315deg, #f5d020 0%, #f53803 74%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    letter-spacing: .2rem;
+}
+
+.subheading {
+    font-size: .9em;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.projectInformation p {
+    font-size: 1.2em;
+    margin: 0 1em;
+}
+
+.subheadingContainer {
+    display: flex;
+    gap: .5em;
+    margin-bottom: .7em;
+}
+
+.vue {
+    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+
+.laravel {
+    filter: invert(48%) sepia(79%) saturate(47876%) hue-rotate(85671deg) brightness(118%) contrast(119%)
+}
+
+.react {
+    filter: invert(48%) sepia(79%) saturate(4786%) hue-rotate(871deg) brightness(118%) contrast(119%)
+}
+
+.node {
+    filter: invert(48%) sepia(79%) saturate(44786%) hue-rotate(871deg) brightness(118%) contrast(119%)
+}
+
+.js {
+filter: invert(69%) sepia(64%) saturate(245%) hue-rotate(1459deg) brightness(118%) contrast(119%)
+}
+
+.description {
+    margin-top: .5rem;
+    color: #dfd4d4;
+    line-height: 36px;
+    border-top: 1px solid gold;
+    padding-top: .3em;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .videos {
+        width: 450px;
+    }
+    .project {
+        padding: 0 2rem;
+    }
+    .project p {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .heading {
+        font-size: 1.5rem
+    }
+    .subheading {
+        font-size: 1.0rem;
+    }
+    .container {
+        margin-top: 30rem;
+    }
+     .project{
+        grid-template-columns: 1fr;
+         margin-left: 2em;
+         grid-gap: 0;
+    }
+    .projectInformation {
+        font-size: .6rem;
+        padding: 0 1.5rem;
+        margin: 0;
+    }
+    .videos {
+        width: 250px;
+        height: 10em;
+        margin-top: 5rem;
+    }
+    .first {
+        margin-top: 10rem;
+    }
+    .description {
+       margin: 0 !important;
+        font-size: 0.9rem;
+    }
+}

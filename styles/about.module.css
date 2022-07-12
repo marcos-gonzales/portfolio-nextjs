@@ -1,0 +1,76 @@
+.video {
+    width: 100%;
+    background: url('/video.mp4') no-repeat center center fixed;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+}
+
+.about {
+    font-size: 4em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 20vh;
+    left: 30vw;
+    color: white;
+    z-index: 9999;
+    animation: fadeIn 2s;
+}
+
+.about2 {
+    font-size: 3em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 31vh;
+    left: 40vw;
+    color: white;
+    z-index: 9999;
+    animation: fadeIn 3s;
+}
+
+.about3 {
+    font-size: 2em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 41vh;
+    left: 50vw;
+    letter-spacing: -1px;
+    color: white;
+    z-index: 9999;
+    animation: fadeIn 4s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+.coloredText {
+    background: linear-gradient(315deg, #f5d020 0%, #f53803 74%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 800px) {
+    .about {
+        font-size: 1.7em;
+        left: 30%;
+    }
+    .about2 {
+        font-size: 1.2em;
+        top: 29vh;
+        left: 28%;
+    }
+    .about3 {
+        font-size: 1.3em;
+        left: 30%;
+        top: 37vh;
+    }
+}

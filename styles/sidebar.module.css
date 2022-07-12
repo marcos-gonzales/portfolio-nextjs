@@ -1,0 +1,52 @@
+.sidebar {
+    z-index: 1000;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 3em;
+    background-color: #255268;
+    height: 100vh;
+    padding-top: 40rem;
+    display: flex;
+    border-right: 2px #fff solid;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.icons {
+    font-size: 150%;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.icons a {
+    color: #ffffff;
+}
+.github:hover,  .github a:hover {
+    transform: scale(2) rotate(360deg);
+    transition: .5s;
+    color: #111;
+}
+
+.linkedin:hover,
+.linkedin a:hover {
+    transform: scale(2) rotate(360deg);
+    transition: .5s;
+    color: #0A66C2;
+}
+
+.twitter:hover,
+.twitter a:hover {
+    transform: scale(2) rotate(360deg);
+    transition: .5s;
+    color: #1D9BF0;
+}
+
+@media only screen and (max-width: 800px) {
+    .sidebar {
+        padding-top: 34rem;
+    }
+}

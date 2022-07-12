@@ -1,0 +1,26 @@
+.showcase {
+    position: absolute;
+    right: 0;
+    min-width: 100%;
+    min-height: 100vh;
+    background: #254757;
+    padding: 15em 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.showcase.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    background-repeat: no-repeat;
+}
+
+@media only screen and(max-width: 800px) {
+    .showcase {
+        min-width: 100%;
+    }
+}
