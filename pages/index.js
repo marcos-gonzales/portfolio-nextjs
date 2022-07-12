@@ -15,7 +15,7 @@ export default function Projects(props) {
             {props.products.map((project, index) => (
                 <div key={index} className={styles.project}>
                         <div>
-                            <Link href="https://oswalds-blog.herokuapp.com/">
+                            <Link href={project.fields.projectUrl}>
                                 <a target="_blank">
                                     <video height="350px" width="560" className={`${styles.videos} ${styles.videoAnimation} ${index === 0 ? styles.first : ''}`} onMouseOver={(e) => e.target.play()}
                                            onMouseLeave={(e) => e.target.pause()}>
@@ -23,16 +23,7 @@ export default function Projects(props) {
                                     </video>
                                 </a>
                             </Link>
-
                         </div>
-                        {/*<Image*/}
-                        {/*    className={styles.imageContainer}*/}
-                        {/*    id="/#projects"*/}
-                        {/*    src={'http:' + project.fields.image.fields.file.url}*/}
-                        {/*    height={500}*/}
-                        {/*    width={500}*/}
-                        {/*    title={props.images[index].fields.title}*/}
-                        {/*    alt={props.images[index].fields.title}/>*/}
 
                     <InView triggerOnce={true}>
                         {({inView, ref}) => (
