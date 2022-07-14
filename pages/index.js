@@ -17,8 +17,13 @@ export default function Projects(props) {
                         <div>
                             <Link href={project.fields.projectUrl}>
                                 <a target="_blank">
-                                    <video height="350px" width="560" className={`${styles.videos} ${styles.videoAnimation} ${index === 0 ? styles.first : ''}`} onMouseOver={(e) => e.target.play()}
-                                           onMouseLeave={(e) => e.target.pause()}>
+                                    <video
+                                        height="350px"
+                                        width="560"
+                                        className={`${styles.videos} ${styles.videoAnimation} ${index === 0 ? styles.first : ''}`}
+                                        onMouseOver={(e) => e.target.play()}
+                                        onMouseLeave={(e) => e.target.pause()}
+                                        playsInline={true}>
                                         <source src={'https:' + project.fields.image.fields.file.url} type="video/mp4"/>
                                     </video>
                                 </a>
