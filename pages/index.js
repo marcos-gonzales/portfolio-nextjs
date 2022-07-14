@@ -21,8 +21,8 @@ export default function Projects(props) {
                                         height="350px"
                                         width="560"
                                         className={`${styles.videos} ${styles.videoAnimation} ${index === 0 ? styles.first : ''}`}
-                                        onMouseOver={(e) => e.target.play()}
-                                        onMouseLeave={(e) => e.target.pause()}
+                                        // onMouseOver={(e) => e.target.play()}
+                                        // onMouseLeave={(e) => e.target.pause()}
                                         playsInline={true}>
                                         <source src={'https:' + project.fields.image.fields.file.url} type="video/mp4"/>
                                     </video>
