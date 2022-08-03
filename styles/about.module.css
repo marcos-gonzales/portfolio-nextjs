@@ -68,11 +68,14 @@
     .about2 {
         font-size: 1.2em;
         top: 29vh;
-        left: 28%;
+        left: 25%;
+    }
+    .about2 span {
+        margin-left: .5em;
     }
     .about3 {
         font-size: 1.3em;
-        left: 30%;
+        left: 26%;
         top: 37vh;
     }
 }
