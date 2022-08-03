@@ -33,6 +33,10 @@
     animation: fadeIn 3s;
 }
 
+.aboout2 span {
+    margin-left: .5em;
+}
+
 .about3 {
     font-size: 2em;
     position: absolute;
