@@ -3,7 +3,7 @@ import styles from "../styles/about.module.css"
 const About = () => {
     return (
         <>
-            <video className={styles.video} autoPlay={true} loop={true} muted={true} playsInline={true}>
+            <video className={styles.video} autoPlay={true} loop={true} muted={true} playsInline={true} disablePictureInPicture={true}>
                 <source src="video.mp4" type="video/ogg"/>
             </video>
             <h1 className={styles.about}>Hi, I&apos;m Marcos.</h1>
