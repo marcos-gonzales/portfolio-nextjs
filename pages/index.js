@@ -2,7 +2,7 @@ import * as contentful from "contentful";
 import Image from 'next/image'
 import Link from "next/link"
 import styles from "../styles/projects.module.css";
-import {InView} from 'react-intersection-observer';
+import { InView } from 'react-intersection-observer';
 
 const client = contentful.createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
@@ -20,43 +20,44 @@ export default function Projects(props) {
     }
     console.log(props)
 
+
     return (
         <div id="projects" className={styles.container}>
             {props.products.map((project, index) => (
                 <div key={index} className={styles.project}>
-                        <div>
-                            <Link href={project.fields.projectUrl}>
-                                <a target="_blank">
-                                    {isMobile ?
-                                        <video
-                                            height="350px"
-                                            width="560"
-                                            className={`${styles.videos} ${index === 0 ? styles.first : ''}`}
-                                            // onMouseOver={(e) => e.target.play()}
-                                            // onMouseLeave={(e) => e.target.pause()}
-                                            autoPlay={true}
-                                            loop={true}
-                                            playsInline={true}>
-                                            <source src={'https:' + project.fields.image.fields.file.url} type="video/mp4"/>
-                                        </video> :
-                                        <video
-                                            height="350px"
-                                            width="560"
-                                            className={`${styles.videos} ${styles.videoAnimation} ${index === 0 ? styles.first : ''}`}
-                                            onMouseOver={(e) => e.target.play()}
-                                            onMouseLeave={(e) => e.target.pause()}
-                                            loop={true}
-                                            playsInline={true}>
-                                            <source src={'https:' + project.fields.image.fields.file.url} type="video/mp4"/>
-                                        </video>
-                                    }
+                    <div>
+                        <Link href={project.fields.projectUrl}>
+                            <a target="_blank">
+                                {isMobile ?
+                                    <video
+                                        height="350px"
+                                        width="560"
+                                        className={`${styles.videos} ${index === 0 ? styles.first : ''}`}
+                                        // onMouseOver={(e) => e.target.play()}
+                                        // onMouseLeave={(e) => e.target.pause()}
+                                        autoPlay={true}
+                                        loop={true}
+                                        playsInline={true}>
+                                        <source src={'https:' + project.fields.image.fields.file.url} type="video/mp4" />
+                                    </video> :
+                                    <video
+                                        height="350px"
+                                        width="560"
+                                        className={`${styles.videos} ${styles.videoAnimation} ${index === 0 ? styles.first : ''}`}
+                                        onMouseOver={(e) => e.target.play()}
+                                        onMouseLeave={(e) => e.target.pause()}
+                                        loop={true}
+                                        playsInline={true}>
+                                        <source src={'https:' + project.fields.image.fields.file.url} type="video/mp4" />
+                                    </video>
+                                }
 
-                                </a>
-                            </Link>
-                        </div>
+                            </a>
+                        </Link>
+                    </div>
 
                     <InView triggerOnce={true}>
-                        {({inView, ref}) => (
+                        {({ inView, ref }) => (
                             <div className={`${styles.projectInformation} ${inView ? styles.animation : ''}`} ref={ref}>
                                 <h1 className={styles.heading}>{project.fields.heading}</h1>
                                 <div>
@@ -64,22 +65,22 @@ export default function Projects(props) {
                                     <div className={styles.subheadingContainer}>
                                         {project.fields.subHeading.includes('Laravel') ?
                                             <Image src="/logo-laravel.svg" className={styles.laravel} height="30"
-                                                   width="30" style={{color: 'white'}} alt="Laravel"></Image> : ''}
+                                                width="30" style={{ color: 'white' }} alt="Laravel"></Image> : ''}
                                         {project.fields.subHeading.includes('Vue') ?
                                             <Image src="/logo-vue.svg" className={styles.vue} height="30" width="30"
-                                                   style={{color: 'white'}} alt="Vue.js"></Image> : ''}
+                                                style={{ color: 'white' }} alt="Vue.js"></Image> : ''}
                                         {project.fields.subHeading.includes('React') ?
                                             <Image src="/logo-react.svg" className={styles.react} height="30" width="30"
-                                                   style={{color: 'white'}} alt="React"></Image> : ''}
+                                                style={{ color: 'white' }} alt="React"></Image> : ''}
                                         {project.fields.subHeading.includes('Node') ?
                                             <Image src="/logo-nodejs.svg" className={styles.node} height="30" width="30"
-                                                   style={{color: 'white'}} alt="Node.js"></Image> : ''}
+                                                style={{ color: 'white' }} alt="Node.js"></Image> : ''}
                                         {project.fields.subHeading.includes('Javascript') ?
                                             <Image src="/logo-javascript.svg" className={styles.js} height="30"
-                                                   width="30" style={{color: 'white'}} alt="Javascript"></Image> : ''}
+                                                width="30" style={{ color: 'white' }} alt="Javascript"></Image> : ''}
                                         {project.fields.subHeading.includes('Mysql') ?
                                             <Image src="/mysql-icon.svg" className={styles.mysql} height="30" width="30"
-                                                   style={{color: 'white'}} alt="Javascript"></Image> : ''}
+                                                style={{ color: 'white' }} alt="Javascript"></Image> : ''}
                                     </div>
 
                                 </div>
