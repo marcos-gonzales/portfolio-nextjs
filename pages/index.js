@@ -19,8 +19,6 @@ export default function Projects(props) {
         width <= 600 ? isMobile = true : isMobile = false;
     }
     console.log(props)
-
-
     return (
         <div id="projects" className={styles.container}>
             {props.products.map((project, index) => (
